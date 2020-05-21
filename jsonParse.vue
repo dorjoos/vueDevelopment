@@ -1,7 +1,6 @@
-```
 <template>
   <div>
-    <p>this is dorjooasdsad {{ users }}</p>
+    <p>this is JSON DATA {{ users }}</p>
   </div>
 </template>
 
@@ -13,6 +12,7 @@ export default {
   },
   data() {
     return {
+      parsedData: {},
       users: {
         list: [
           {
@@ -91,8 +91,8 @@ export default {
         jsonStr = JSON.stringify(obj);
       }
     }
-    jsonStr = JSON.stringify(obj);
-    console.log(jsonStr);
+    this.parsedData = JSON.stringify(obj);
+    console.log(this.parsedData);
   }
 };
 </script>
@@ -113,4 +113,3 @@ a {
   color: #42b983;
 }
 </style>
-```
